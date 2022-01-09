@@ -1,0 +1,36 @@
+{
+    "name": "eliuflorez/tenancy-framework",
+    "description": "Creating multi tenant saas from your Laravel app with ease",
+    "keywords": ["laravel", "multi-tenant", "saas", "tenancy", "aws", "gce"],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tenancy\\": ""
+        }
+    },
+		"authors": [
+        {
+            "name": "Eliu Florez",
+            "email": "eliufz@gmail.com",
+            "homepage": "https://github.com/EliuFlorez"
+        }
+    ],
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tenancy\\Providers\\TenancyProvider"
+            ],
+            "aliases": {
+                "Tenancy": "Tenancy\\Facades\\Tenancy"
+            }
+        }
+    }
+}
